@@ -1,0 +1,171 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:10px;
+}
+
+.mainContainer{
+    background:white;
+    width:90%;           /* flexible width */
+    max-width:400px;     /* max width for desktop */
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:1.6rem;
+}
+
+.inputBox{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;      /* wrap on small screens */
+}
+
+#taskInput{
+    flex:1 1 60%;       /* grow/shrink */
+    min-width:150px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    outline:none;
+    font-size:1rem;
+}
+
+#taskInput:focus{
+    border-color:#4CAF50;
+}
+
+#addTaskbtn{
+    flex:1 1 30%;
+    min-width:80px;
+    padding:10px 15px;
+    border:none;
+    border-radius:6px;
+    background:#4CAF50;
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+    transition:0.2s;
+}
+
+#addTaskbtn:hover{
+    background:#43a047;
+}
+
+.tasks{
+    margin-top:20px;
+}
+
+#taskLists{
+    list-style:none;
+}
+
+#taskLists li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px;
+    margin-bottom:10px;
+    background:#f1f1f1;
+    border-radius:6px;
+    transition:0.2s;
+    flex-wrap:wrap; /* responsive wrap */
+}
+
+#taskLists li:hover{
+    background:#e6e6e6;
+}
+
+.completed{
+    text-decoration:line-through;
+    opacity:0.5;
+}
+
+#taskLists li div{
+    display:flex;
+    gap:5px;
+    flex-wrap:wrap;
+}
+
+#taskLists li input{
+    flex:1 1 60%;
+    padding:5px;
+    font-size:14px;
+    min-width:100px;
+}
+
+.editBtn, .saveBtn{
+    background:#2196F3;
+    color:white;
+    border:none;
+    padding:5px 8px;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:12px;
+    transition:0.2s;
+}
+
+.editBtn:hover, .saveBtn:hover{
+    background:#1976d2;
+}
+
+.clearBtn{
+    background:#ff5252;
+    color:white;
+    border:none;
+    padding:5px 8px;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:12px;
+    transition:0.2s;
+}
+
+.clearBtn:hover{
+    background:#e04848;
+}
+
+/* Media queries for small screens */
+@media(max-width:400px){
+    .mainContainer{
+        padding:15px;
+    }
+
+    h1{
+        font-size:1.4rem;
+    }
+
+    #taskInput, #addTaskbtn{
+        font-size:14px;
+        padding:8px;
+    }
+
+    #taskLists li{
+        padding:8px;
+        font-size:14px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    #taskLists li div{
+        margin-top:5px;
+    }
+
+    .editBtn, .saveBtn, .clearBtn{
+        font-size:11px;
+        padding:4px 6px;
+    }
+}
