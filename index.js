@@ -212,7 +212,7 @@ function addTaskToDOM(task) {
         <span class="taskText">${task.text}</span>
         <div>
             <button class="editBtn">Edit</button>
-            <button class="clearBtn">Completed</button>
+            <button class="clearBtn">Delete</button>
         </div>
     `;
     taskLists.appendChild(li);//Appends the task to the task list container.
